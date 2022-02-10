@@ -1,0 +1,104 @@
+* {font-family: 'Source Sans Pro', sans-serif;
+   box-sizing: border-box;}
+
+h1{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4em;
+  border-bottom: 2px solid;
+  margin-bottom: .2em;
+}
+
+
+
+
+header {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  color: black;
+  padding: 1rem;
+  font-size: 2rem;
+  border: 2px black solid;
+  border-radius: 6px;
+  background: white;
+  style: none;
+  transition: 0.3s ease;
+  margin: 0 15px;
+}
+
+button:hover{
+  color: white;
+  background: black;
+  cursor: pointer;
+}
+
+.button-container{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.start-container{
+  max-width: 600px;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.scoreboard{
+  visibility: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.animate{
+  visibility: visible;
+  animation-name: slide-up;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  
+}
+
+@keyframes slide-up{
+  from { margin: 100% auto; }
+  
+  to { margin: 0% auto;}
+}
+
+.scoreboard h2{
+  font-size: 1em;
+  padding: 0 ;
+}
+
+.playerScore, .computerScore{
+  text-align: center;
+  min-width:150px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 2em;
+  background: #eee;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.message {
+  margin-top: .5em;
+  text-align: center;
+  font-size: 1.2rem;
+  
+}
+
