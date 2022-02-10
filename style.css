@@ -29,10 +29,17 @@ button {
   margin: 0 15px;
 }
 
+
 button:hover{
   color: white;
   background: black;
   cursor: pointer;
+}
+
+button.reset{
+    visibility: hidden;
+    margin: 0 auto;
+    display:block;
 }
 
 .button-container{
@@ -64,7 +71,7 @@ button:hover{
 .animate{
   visibility: visible;
   animation-name: slide-up;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
   
@@ -100,5 +107,11 @@ button:hover{
   text-align: center;
   font-size: 1.2rem;
   
+}
+
+.winner {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight:bold;
 }
 

@@ -10,10 +10,12 @@ let message = document.querySelector(".message");
 let winnerMsg = document.querySelector(".winner");
 let playScoreTxt = document.querySelector(".plyrScore");
 let compScoreTxt = document.querySelector(".compScore");
+const resetBtn = document.querySelector("button.reset");
 
 // EVENT LISTENERS
 
 startBtn.addEventListener("click", startGame);
+resetBtn.addEventListener("click", e => location.reload());
 
 
 // GLOBAL VARIABLES
@@ -104,14 +106,18 @@ function play() {
     }
     
     if(playerScore == 5){
-      message.innerText = `You win the game with 5 points`;
+      message.innerText = `${playerChoice} vs. ${computerChoice}`;
+      winnerMsg.innerText = `You win the game with 5 points`;
       btnContainer.remove();    //removing the div prevents further button clicks but is ugly
-      buttons.disabled = true;  //this code doesn't work
+      resetBtn.style.visibility = "visible";
+      resetBtn.classList.add("animate");
     }
     else if(computerScore == 5){
-      message.innerText = "You lost!"
+      message.innerText = `${playerChoice} vs. ${computerChoice}`;
+      winnerMsg.innerText = "Sorry. You lost."
       btnContainer.remove();
-      buttons.disabled = true;  //this code doesn't work
+      resetBtn.style.visibility = "visible";
+      resetBtn.classList.add("animate");
     }
     else{ return; }
     
